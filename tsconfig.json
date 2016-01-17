@@ -6,8 +6,7 @@
         "noImplicitAny": true,
         "sourceMap": true
     },
-    "files": [
-        "typings/tsd.d.ts",
-        "index.ts"
+    "exclude": [
+        "node_modules"
     ]
 }
