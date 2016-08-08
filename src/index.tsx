@@ -1,9 +1,11 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { GameMenu } from "./layouts/GameMenu";
+import GameMenu from "./layouts/GameMenu";
 import Panels from "./layouts/Panels";
 
-ReactDOM.render(<Panels/>, document.getElementsByTagName("main")[0]);
+let root = <div><GameMenu/><Panels/></div>;
+
+ReactDOM.render(root, document.getElementsByTagName("main")[0]);
 
 declare var module: any;
 if (module.hot) {

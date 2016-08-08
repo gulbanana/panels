@@ -1,9 +1,8 @@
 {
     "compilerOptions": {
-        "target": "es6",
-        "jsx": "preserve",
+        "target": "es5",
+        "jsx": "react",
         "outDir": "./dist/",
-        "sourceMap": true,
         "noImplicitAny": true,
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true

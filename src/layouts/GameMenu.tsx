@@ -5,7 +5,7 @@ import {BorderPanel} from "../widgets/BorderPanel";
 import {Scores} from "./GameScores";
 import {Commands} from "./GameCommands";
 
-export class GameMenu extends React.Component<{}, {text: string}> {
+export default class GameMenu extends React.Component<{}, {text: string}> {
         constructor(props: {}) {
         super(props);
         this.state = {text: "Metaclicker"};

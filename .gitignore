@@ -1,7 +1,6 @@
 # artifacts
 node_modules/
 typings/
-dist/
 
 # ide
 .vscode/
