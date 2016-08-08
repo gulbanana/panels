@@ -1,0 +1,14 @@
+.button {
+    font-family: Verdana;
+    font-size: 12pt;
+    text-decoration: underline;
+    background-color: white;
+    color: blue;
+    border: 0px;
+    margin: 2;
+    text-align: left;
+}
+
+.disabled {
+    color: gray
+}

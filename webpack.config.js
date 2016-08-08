@@ -1,27 +1,37 @@
-var webpack = require("webpack");
+var webpack = require('webpack');
 
 module.exports = {
-	entry: './index.ts',
-	output: {
-		filename: 'app.js',
-		path: 'assets',
-		publicPath: '/assets/'
-	},
-	module: {
-		loaders: [{
-			test: /\.tsx?$/,
-			loader: 'ts-loader'
-		}]
-	},
-	resolve: {
-		extensions: ['', '.js', '.tsx', '.ts']
-	},
+    devtool: "source-map",
+
+    entry: "./src/index",
+
+    output: {
+        filename: "./dist/app.js",
+    },
+
+    resolve: {
+        extensions: ["", ".ts", ".tsx", ".js", ".jsx"]
+    },
+
+    module: {
+        loaders: [
+            { test: /\.ts(x?)$/, loader: "babel-loader", query: { presets: ["es2015", "react"] } },
+            { test: /\.ts(x?)$/, loader: "ts" },
+            { test: /\.css/, loader: 'style!css?modules&sourceMap' },
+        ]
+    },
+
     plugins: [
         new webpack.DefinePlugin({
             'process.env': {
-                'NODE_ENV': '"production"'
+                "NODE_ENV": JSON.stringify("production")
             }
         }),
-        new webpack.optimize.UglifyJsPlugin()
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        }),
+        new webpack.optimize.OccurrenceOrderPlugin()
     ]
-}
+};

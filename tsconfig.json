@@ -1,12 +1,16 @@
 {
     "compilerOptions": {
-    	"target": "es5",
-        "module": "commonjs",
-        "jsx": "react",
+        "target": "es6",
+        "jsx": "preserve",
+        "outDir": "./dist/",
+        "sourceMap": true,
         "noImplicitAny": true,
-        "sourceMap": true
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true
     },
-    "exclude": [
-        "node_modules"
+    "files": [
+        "./typings/index.d.ts",
+        "./src/css.d.ts",
+        "./src/index.tsx"
     ]
 }
